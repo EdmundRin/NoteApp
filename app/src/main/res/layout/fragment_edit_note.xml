@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:hint="@string/titleEditTextHint" />
+            android:hint="@string/titleEditTextHint"
+            android:text="@={viewModel.note.noteName}"/>
 
         <EditText
             android:id="@+id/descriptionEditText"
@@ -26,13 +27,15 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:hint="@string/descriptionEditTextHint" />
+            android:hint="@string/descriptionEditTextHint"
+            android:text="@={viewModel.note.noteDescription}"/>
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="@string/saveButton" />
+            android:text="@string/saveButton"
+            android:onClick="@{() -> viewModel.updateNote()}"/>
     </LinearLayout>
 </layout>

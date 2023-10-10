@@ -13,21 +13,6 @@
         android:theme="@style/Theme.Note"
         tools:targetApi="31">
         <activity
-            android:name=".NoteDatabase"
-            android:exported="false"
-            android:label="@string/title_activity_note_database"
-            android:theme="@style/Theme.Note" />
-        <activity
-            android:name=".NoteDao"
-            android:exported="false"
-            android:label="@string/title_activity_note_dao"
-            android:theme="@style/Theme.Note" />
-        <activity
-            android:name=".Note"
-            android:exported="false"
-            android:label="@string/title_activity_note"
-            android:theme="@style/Theme.Note" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

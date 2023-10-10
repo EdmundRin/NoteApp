@@ -20,6 +20,7 @@ class NoteViewModel(val dao: NoteDao) : ViewModel() {
             note.noteName = newNoteName
             note.noteDescription =newNoteDescription
             dao.insert(note)
+            _navigateToNote.value = note.noteId
         }
     }
     fun onNoteClicked(noteId: Long) {

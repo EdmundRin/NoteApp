@@ -24,8 +24,14 @@ class EditNoteViewModel(noteId: Long,val dao: NoteDao) : ViewModel() {
      * Initiates an update operation to modify the details of the note.
      */
     fun updateNote() {
-        viewModelScope.launch {
-            dao.update(note.value!!)
+        val noteToUpdate = note.value
+        if (noteToUpdate != null) {
+            viewModelScope.launch {
+                dao.update(noteToUpdate)
+                _navigateToList.value = true
+            }
+        } else {
+            // Handle the case where 'note.value' is null, e.g., show an error message or take appropriate action.
             _navigateToList.value = true
         }
     }

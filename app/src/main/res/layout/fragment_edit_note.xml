@@ -46,6 +46,6 @@
             android:layout_gravity="center"
             android:visibility="gone"
             android:text="@string/deleteButton"
-            android:onClick="@{() -> viewModel.deleteTask()}" />
+            android:onClick="@{() -> viewModel.deleteNote()}" />
     </LinearLayout>
 </layout>

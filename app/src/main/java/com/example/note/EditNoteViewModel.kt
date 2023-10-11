@@ -32,7 +32,7 @@ class EditNoteViewModel(noteId: Long,val dao: NoteDao) : ViewModel() {
     /**
      * Initiates a deletion operation to remove the note.
      */
-    fun deleteTask() {
+    fun deleteNote() {
         viewModelScope.launch {
             dao.delete(note.value!!)
             _navigateToList.value = true

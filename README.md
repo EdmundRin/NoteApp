@@ -10,7 +10,7 @@ The following **required** functionality is completed:
 * [x] User can create a new note by providing a title and description.
 * [x] User can edit an existing note's title and description.
 * [ ] User can delete a note.
-* [ ] User can return to the list of existing notes after editing the node.
+* [x] User can return to the list of existing notes after editing the node.
 
 The following **extensions** are implemented:
 

@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:hint="@string/titleEditTextHint"
+            android:inputType="text"
             android:text="@={viewModel.note.noteName}"/>
 
         <EditText
@@ -28,6 +29,7 @@
             android:layout_weight="1"
             android:textSize="16sp"
             android:hint="@string/descriptionEditTextHint"
+            android:inputType="text"
             android:text="@={viewModel.note.noteDescription}"/>
 
         <Button
@@ -37,5 +39,13 @@
             android:textSize="16sp"
             android:text="@string/saveButton"
             android:onClick="@{() -> viewModel.updateNote()}"/>
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text="Delete Task"
+            android:onClick="@{() -> viewModel.deleteTask()}" />
     </LinearLayout>
 </layout>

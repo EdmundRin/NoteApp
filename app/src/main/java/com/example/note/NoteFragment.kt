@@ -13,9 +13,12 @@ import com.example.note.databinding.FragmentNoteBinding
 
 
 /**
- * A simple [Fragment] subclass.
- * Use the [NoteFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A Fragment for displaying a list of notes.
+ *
+ * This fragment presents a list of notes, allowing the user to view and manage their notes.
+ * It utilizes a ViewModel to manage note data and handles user interactions, such as clicking on a note
+ * for details or deleting a note. Additionally, it offers navigation to the EditNoteFragment for editing
+ * and adding new notes.
  */
 class NoteFragment : Fragment() {
     val TAG = "NoteFragment"
@@ -39,13 +42,35 @@ class NoteFragment : Fragment() {
 
          }*/
 
+        /**
+         * Handle actions related to notes and their deletion.
+         *
+         * This class provides methods to perform various actions related to notes, including
+         * clicking on a note, confirming the deletion of a note, and deleting a note when confirmed.
+         */
         fun noteClicked (noteId : Long) {
             viewModel.onNoteClicked(noteId)
         }
+
+        /**
+         * Handle the user's confirmation to delete a note.
+         *
+         * This method logs the note's ID and should implement the actual deletion logic.
+         *
+         * @param noteId The ID of the note to be deleted.
+         */
         fun yesPressed(noteId : Long) {
             Log.d(TAG, "in yesPressed(): noteId = $noteId")
             //TODO: delete the note with id = noteId
         }
+
+        /**
+         * Handle the user's request to delete a note.
+         *
+         * This method displays a confirmation dialog for deleting a note and handles the confirmation.
+         *
+         * @param noteId The ID of the note to be deleted.
+         */
         fun deleteClicked (noteId : Long) {
             ConfirmDeleteDialogFragment(noteId,::yesPressed).show(childFragmentManager,
                 ConfirmDeleteDialogFragment.TAG)

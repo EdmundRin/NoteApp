@@ -6,7 +6,13 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.DialogFragment
-
+/**
+ * A dialog fragment for confirming the deletion of a note.
+ *
+ * This dialog fragment is used to confirm the deletion of a note. It displays a confirmation
+ * message with "Yes" and "No" buttons, allowing the user to confirm or cancel the deletion.
+ * The result of the confirmation is handled via the provided `clickListener`.
+ */
 class ConfirmDeleteDialogFragment(val noteId : Long,val clickListener: (noteId: Long) -> Unit) : DialogFragment() {
     val TAG = "ConfirmDeleteDialogFragment"
     interface myClickListener {

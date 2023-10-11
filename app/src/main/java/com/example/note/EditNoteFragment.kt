@@ -11,9 +11,12 @@ import androidx.navigation.findNavController
 import com.example.note.databinding.FragmentEditNoteBinding
 
 /**
- * A simple [Fragment] subclass.
- * Use the [EditNoteFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A Fragment responsible for editing note details.
+ *
+ * This fragment allows users to edit the details of a note, such as its title and description.
+ * It retrieves the note's information based on the provided `noteId` and uses a ViewModel to manage
+ * the editing process. When the user completes editing, the changes can be saved, and the user
+ * can navigate back to the list of notes.
  */
 class EditNoteFragment : Fragment() {
     private var _binding: FragmentEditNoteBinding? = null

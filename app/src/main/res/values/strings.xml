@@ -4,6 +4,7 @@
     <string name="titleEditTextHint">Title</string>
     <string name="descriptionEditTextHint">Description</string>
     <string name="saveButton">Save</string>
+    <string name="deleteButton">Delete</string>
 
     <string name="delete_confirmation">Are you sure you want to delete the task?</string>
     <string name="yes">yes</string>
